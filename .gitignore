@@ -1,0 +1,3 @@
+# don't want these pushing up to git
+package-lock.json
+/node_modules
