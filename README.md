@@ -17,11 +17,11 @@ Follow the Docx [here](https://docs.docker.com/get-started/).
 
 I created the Dockerfile.
 
-FROM node:12-alpine // this is the base that we build on (this is a node app, so node selected)
-WORKDIR /app //this is where the app will
-COPY . . //copy ALL from here, to here
-RUN npm install // the command needed to install the dependancies
-EXPOSE 8080 //this lets (Mac - not Window) users see which port you are running on
+FROM node:12-alpine // this is the base that we build on (this is a node app, so node selected)  
+WORKDIR /app //this is where the app will  
+COPY . . //copy ALL from here, to here  
+RUN npm install // the command needed to install the dependancies  
+EXPOSE 8080 //this lets (Mac - not Window) users see which port you are running on  
 CMD npm run devStart //this is taken from the package.json scripts, the command needed to start the app
 
 ### CLI (Build and run)
@@ -69,4 +69,4 @@ Will NOT work, as it needs to have your user name before. 2 ways to solve this
 
 2. If you have already created an image you can add a tag on
    - docker tag IMAGE-NAME YOUR-USER-NAME/IMAGE-NAME
-   - in this case it was docker tag express-docker-test socsteve/express-docker-test
+   - in this case it was docker tag express-docker-test YOUR-USER-NAME/express-docker-test
